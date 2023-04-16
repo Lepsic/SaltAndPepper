@@ -8,4 +8,4 @@ def sort_list(input_data: list) -> list:
     return input_data
 
 
-print(sort_list([1, 10, 3, 5, 7, 11]))
+
