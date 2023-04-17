@@ -20,4 +20,3 @@ def max_odd(array: list):
         return max_value
 
 
-
