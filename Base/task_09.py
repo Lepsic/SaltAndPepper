@@ -1,6 +1,3 @@
-a = {"a": 2, "b": 12}
-s = 0
-
 
 def connect_dicts(dict1=None, dict2=None):
     filter_dict1 = dict()
