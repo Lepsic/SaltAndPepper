@@ -5,6 +5,7 @@ def combine_anagrams(words_array):
     counter_list = list()
     out_data = list()
     for word in words_array:
+        word.lower()
         counter_list.append(Counter(word))
 
     for current_counter in range(len(counter_list)):
@@ -25,5 +26,3 @@ def combine_anagrams(words_array):
     return out_data
 
 
-print(combine_anagrams(["cars", "for", "potatoes", "racs", "four", "scar",
-"creams", "scream"]))

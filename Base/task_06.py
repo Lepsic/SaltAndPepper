@@ -36,4 +36,4 @@ def rps_game_winner(data_games: list) -> str:
         return out_data
 
 
-print(rps_game_winner([['player1', 'R'], ['player2', 'S']]))
+
