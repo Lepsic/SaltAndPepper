@@ -17,4 +17,4 @@ def multiply_numbers(inputs=None):
     return output_value
 
 
-print(multiply_numbers([5, 6, 4]))
+
