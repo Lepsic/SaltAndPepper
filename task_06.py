@@ -1,4 +1,3 @@
-from loguru import logger
 
 """
 Игра камень ножницы бумага
@@ -11,16 +10,14 @@ P = Бумага
 
 
 def rps_game_winner(data_games: list) -> str:
-    out_data = data_games[0][0] + " " + data_games[0][
-        1]  # Сразу предположим, что побеждает первый игрок, в противном случае перезаписываем переменную
+    out_data = data_games[0][0] + " " + \
+        data_games[0][1]  # Сразу предположим, что побеждает первый игрок, в противном случае перезаписываем переменную
     if len(data_games) != 2:
-        logger.error("WrongNumberOfPlayersError")
         raise ValueError("WrongNumberOfPlayersError")
     for player_info in data_games:
         if player_info[1] in ["P", "S", "R"]:
             continue
         else:
-            logger.error("NoSuchStrategyError")
             raise ValueError("NoSuchStrategyError")
     player1_action, player2_action = data_games[0][1], data_games[1][1]
     if player1_action == player2_action:

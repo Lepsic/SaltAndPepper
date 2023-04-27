@@ -1,7 +1,7 @@
 import datetime
 
 
-def date_in_feature(days: int) -> datetime:
+def date_in_future(days: int) -> datetime:
     current_date = datetime.datetime.now()
     day = datetime.timedelta(days=days)
     current_date = current_date + day
