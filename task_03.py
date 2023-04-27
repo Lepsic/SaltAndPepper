@@ -8,9 +8,9 @@ def max_odd(array: list):
                 sort_array.append(element)
             else:
                 continue
-        except TypeError:
+        except ValueError:
             continue
-    if sort_array.count != 0:
+    if len(sort_array) != 0:
         max_value = max(sort_array)
         if max_value % 1 == 0:
             return int(max_value)
@@ -20,3 +20,6 @@ def max_odd(array: list):
         return max_value
 
 
+
+
+print(max_odd(['ololo', 'fufufu']))
