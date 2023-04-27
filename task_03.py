@@ -21,5 +21,3 @@ def max_odd(array: list):
 
 
 
-
-print(max_odd(['ololo', 'fufufu']))
