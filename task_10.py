@@ -1,14 +1,17 @@
 import re
 from collections import Counter
 
-exception_string = "-"
+alphavit = set("1234567890qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM")
+
+
 
 
 def count_words(input_str: str):
-    input_str = input_str.lower()
-    input_str_update = re.sub(exception_string, "", input_str)
-    str_array = input_str_update.split()
+    input_str = ''.join(filter(alphavit.__contains__, input_str)).lower()
+    str_array = input_str.split()
     counter = Counter(str_array)
     return dict(counter)
 
+
+print(count_words("A man, a plan, a canal -- Panama"))
 
