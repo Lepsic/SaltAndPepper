@@ -7,18 +7,23 @@ R = Камень
 S = Ножницы
 P = Бумага
 """
+class WrongNumberOfPlayersError(Exception):
+    pass
+
+class NoSuchStrategyError(Exception):
+    pass
 
 
 def rps_game_winner(data_games: list) -> str:
     out_data = data_games[0][0] + " " + \
         data_games[0][1]  # Сразу предположим, что побеждает первый игрок, в противном случае перезаписываем переменную
     if len(data_games) != 2:
-        raise ValueError("WrongNumberOfPlayersError")
+        raise WrongNumberOfPlayersError
     for player_info in data_games:
         if player_info[1] in ["P", "S", "R"]:
             continue
         else:
-            raise ValueError("NoSuchStrategyError")
+            raise NoSuchStrategyError
     player1_action, player2_action = data_games[0][1], data_games[1][1]
     if player1_action == player2_action:
         return out_data
@@ -34,3 +39,4 @@ def rps_game_winner(data_games: list) -> str:
 
 
 
+print(rps_game_winner([['player1', 'P'], ['player2', 'S']]))
