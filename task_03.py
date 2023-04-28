@@ -10,6 +10,8 @@ def max_odd(array: list):
                 continue
         except ValueError:
             continue
+        except TypeError:
+            continue
     if len(sort_array) != 0:
         max_value = max(sort_array)
         if max_value % 1 == 0:
@@ -20,4 +22,4 @@ def max_odd(array: list):
         return max_value
 
 
-
+print(max_odd(['ololo', 2, 3, 4, [1, 2], None]))
