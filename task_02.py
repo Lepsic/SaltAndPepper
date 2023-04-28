@@ -17,4 +17,7 @@ def coincidence(data=None, rang=None) -> list:
                 out_array.append(append_data)
         except ValueError:
             continue
+        except TypeError:
+            continue
     return out_array
+
