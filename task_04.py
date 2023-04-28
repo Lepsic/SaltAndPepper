@@ -1,4 +1,6 @@
 def sort_list(input_data: list) -> list:
+    if input_data == list():
+        return input_data
     min_value = min(input_data)
     max_value = max(input_data)
     for element in range(len(input_data)):
@@ -13,3 +15,4 @@ def sort_list(input_data: list) -> list:
 
 
 
+print(sort_list([]))
