@@ -9,20 +9,21 @@ class Dessert:
         else:
             return False
 
-    def is_dilicious(self):
+    def is_delicious(self):
         return True
 
     @property
     def name(self):
         return self._name
+
     @property
     def calories(self):
         return self._calories
 
-
     @name.setter
     def name(self, name):
         self._name = name
+
     @calories.setter
     def calories(self, calories):
         self._calories = calories
