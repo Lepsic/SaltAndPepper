@@ -13,5 +13,5 @@ def count_words(input_str: str):
     return dict(counter)
 
 
-print(count_words("A man, a plan, a canal -- Panama"))
+
 

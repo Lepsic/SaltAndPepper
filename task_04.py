@@ -15,4 +15,3 @@ def sort_list(input_data: list) -> list:
 
 
 
-print(sort_list([]))

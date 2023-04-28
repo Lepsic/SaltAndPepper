@@ -22,4 +22,4 @@ def max_odd(array: list):
         return max_value
 
 
-print(max_odd(['ololo', 2, 3, 4, [1, 2], None]))
+
