@@ -1,12 +1,9 @@
-from loguru import logger
-
 
 def coincidence(data=None, rang=None) -> list:
     if data is None or rang is None:
         return list()
     if type(rang) is not range:
-        logger.error("Второй аргумент не является объектом класса range")
-        raise TypeError
+        raise TypeError("Второй аргумент не является объектом класса range")
 
     min_value = rang.start
     max_value = rang.stop
