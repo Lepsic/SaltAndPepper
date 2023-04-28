@@ -1,7 +1,7 @@
 class Dessert:
     def __init__(self, name=None, calories=None):
-        self.name = name
-        self.calories = calories
+        self._name = name
+        self._calories = calories
 
     def is_healthy(self):
         if self.calories < 200:
@@ -14,17 +14,20 @@ class Dessert:
 
     @property
     def name(self):
-        return self.name
-
+        return self._name
     @property
     def calories(self):
-        return self.calories
+        return self._calories
+
 
     @name.setter
-    def name(self, value):
-        self._name = value
-
+    def name(self, name):
+        self._name = name
     @calories.setter
-    def calories(self, value):
-        self.calories = value
+    def calories(self, calories):
+        self._calories = calories
+
+
+
+
 
