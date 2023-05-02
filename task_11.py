@@ -4,19 +4,17 @@ class Dessert:
         self._calories = calories
 
     def is_healthy(self):
-        if type(self._calories)!=int:
+        if type(self._calories) != int:
             try:
                 self.calories = int(self._calories)
             except ValueError:
                 return False
             except TypeError:
                 return False
-        if int(self.calories) < 200:
+        if self.calories < 200:
             return True
         else:
             return False
-
-
 
     def is_delicious(self):
         return True
@@ -36,6 +34,5 @@ class Dessert:
     @calories.setter
     def calories(self, calories):
         self._calories = calories
-
 
 
